@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Login | EcoTrack{% endblock %}
+{% block head %}
+    {{ super() }}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
+  <!-- Font Awesome CDN link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+{% endblock %}
+
+{% block navbar %}{% endblock %}  <!--to hide navbar on login page -->
+{% block content %}
+  <div class="wrapper">
+    <div class="title"><span>EcoTrack</span></div>
+    <form action="/login" method="POST">
+      <div class="row">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" placeholder="Email or Phone" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <div class="pass"><a href="#">Forgot password?</a></div>
+      <div class="row button">
+        <input type="submit" value="Login" />
+      </div>
+      <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+    </form>
+  </div>
+{% endblock %}
