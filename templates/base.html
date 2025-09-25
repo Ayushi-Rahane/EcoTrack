@@ -27,9 +27,9 @@
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="{{ url_for('add_vendor') }}">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <span class="link-name">Add Vendor</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-chart"></i>
@@ -50,7 +50,7 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="#">
+                <li><a href="{{ url_for('logout') }}">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Logout</span>
                 </a></li>

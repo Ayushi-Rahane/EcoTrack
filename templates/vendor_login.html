@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Admin Login | EcoTrack{% endblock %}
+{% block title %}Vendor Login | EcoTrack{% endblock %}
 {% block head %}
     {{ super() }}
 
@@ -13,7 +13,7 @@
 {% block content %}
   <div class="wrapper">
     <div class="title"><span>EcoTrack</span></div>
-    <form action="/login" method="POST">
+    <form action="/vendor_login" method="POST">
       <div class="row">
         <i class="fas fa-user"></i>
         <input type="text" name="username" placeholder="Email or Phone" required />
